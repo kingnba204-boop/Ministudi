@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101827">
+<meta name="description" content="MiniStudio aide les créateurs et petites entreprises à préparer leurs contenus marketing.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>MiniStudio Premium</title>
+<style>
+:root{--bg:#0a1220;--panel:#121e31;--panel2:#1a2941;--text:#f4f7fc;--muted:#aab8cc;--gold:#f4c45a;--line:#2b3b55;--green:#74d8a6}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(150deg,#09111e,#13243b);color:var(--text);font:16px system-ui,Arial,sans-serif}
+main{max-width:880px;margin:auto;padding:16px 15px 48px}.top{display:flex;justify-content:space-between;align-items:center;padding:7px 2px 20px}.brand{font-size:23px;font-weight:900}.brand span{color:var(--gold)}.pill{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--gold);border:1px solid #79612e;border-radius:30px;padding:7px 10px}
+.hero,.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:19px;margin:13px 0}.hero{background:radial-gradient(circle at 95% 0,#59472455,transparent 35%),var(--panel);padding:25px 20px}
+.kicker{font-size:12px;letter-spacing:1.5px;color:var(--gold);font-weight:800;text-transform:uppercase}h1{font-size:clamp(32px,8vw,51px);line-height:1.05;margin:10px 0}h2{font-size:20px;margin:0 0 14px}.muted,p{color:var(--muted);line-height:1.55}
+button{border:0;border-radius:12px;padding:12px 16px;font:700 15px system-ui;cursor:pointer}.gold{background:var(--gold);color:#171717}.soft{background:var(--panel2);border:1px solid var(--line);color:var(--text)}.full{width:100%;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.tile{background:#0d192a;border:1px solid var(--line);padding:14px;border-radius:14px}.tile b{display:block;margin:7px 0 4px}.tile small{color:var(--muted);line-height:1.45}
+label{display:block;color:var(--muted);font-size:13px;margin:10px 0 6px}input,select,textarea{width:100%;border:1px solid var(--line);border-radius:11px;background:#0a1627;color:var(--text);padding:12px;font:inherit}textarea{min-height:100px;resize:vertical}
+.output{white-space:pre-wrap;background:#0a1627;border:1px solid var(--line);padding:14px;border-radius:12px;min-height:80px;line-height:1.6;margin-top:12px}
+.price{font-size:29px;color:var(--gold);font-weight:900;margin:9px 0}.plan{background:#0d192a;border:1px solid var(--line);padding:15px;border-radius:15px}.plan.featured{border-color:#9a7836}
+.note{border-left:3px solid var(--gold);padding-left:12px;font-size:13px;color:var(--muted);line-height:1.6}
+#status{font-size:13px;color:var(--green);min-height:20px}.hidden{display:none}.foot{text-align:center;color:var(--muted);font-size:12px;padding:18px 4px}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.top{align-items:flex-start}}
+</style></head>
+<body><main>
+<div class="top"><div class="brand">MiniStudio<span>.</span></div><div class="pill">PREMIUM</div></div>
+<header class="hero">
+<div class="kicker">Ton atelier de contenu</div>
+<h1>Des idées plus claires.<br><span style="color:var(--gold)">Des contenus prêts à créer.</span></h1>
+<p>Prépare des publications, des scripts vidéo et des messages promotionnels pour les petites entreprises et les créateurs.</p>
+<button class="gold" id="installBtn" style="display:none">Installer l'application</button>
+</header>
+
+<section class="card"><h2>Ton atelier de création</h2>
+<label for="business">Activité ou produit</label><input id="business" placeholder="Ex. boutique de vêtements, restaurant…">
+<label for="format">Format</label><select id="format"><option value="post">Publication Facebook / Instagram</option><option value="video">Script vidéo TikTok (20 secondes)</option><option value="whatsapp">Message WhatsApp</option><option value="caption">Légende courte</option></select>
+<label for="goal">Objectif</label><select id="goal"><option>Présenter un produit ou service</option><option>Attirer de nouveaux clients</option><option>Annoncer une offre spéciale</option><option>Faire connaître une activité</option></select>
+<label for="style">Ton</label><select id="style"><option>Amical et dynamique</option><option>Professionnel</option><option>Simple et direct</option><option>Drôle et original</option></select>
+<button class="gold full" onclick="makeContent()">Créer un exemple</button>
+<div class="output" id="output">Ton texte personnalisé apparaîtra ici.</div>
+<button class="soft full" onclick="copyContent()">Copier le texte</button><div id="status"></div>
+</section>
+
+<section class="card"><h2>Fonctionnalités</h2><div class="grid">
+<div class="tile">✍️<b>Textes publicitaires</b><small>Des idées de messages pour présenter une offre.</small></div>
+<div class="tile">🎬<b>Scripts vidéo</b><small>Des scénarios courts pour Reels, TikTok et Shorts.</small></div>
+<div class="tile">📱<b>Publications sociales</b><small>Des structures de posts pour les réseaux sociaux.</small></div>
+<div class="tile">💡<b>Idées marketing</b><small>Des angles de contenu adaptés à une activité.</small></div>
+</div></section>
+
+<section class="card"><h2>Offres envisagées</h2><div class="grid">
+<div class="plan"><b>Découverte</b><div class="price">Gratuit</div><p class="muted">Quelques créations d'essai pour découvrir l'outil.</p></div>
+<div class="plan featured"><b>Premium</b><div class="price" id="price">2 000 F CFA</div><p class="muted">Accès étendu aux outils et modèles supplémentaires.</p></div>
+</div>
+<label for="country">Pays / devise d'affichage</label><select id="country" onchange="changeCurrency()">
+<option value="BF">Burkina Faso — XOF</option><option value="CI">Côte d'Ivoire — XOF</option><option value="SN">Sénégal — XOF</option><option value="GH">Ghana — GHS</option><option value="NG">Nigeria — NGN</option><option value="US">États-Unis — USD</option><option value="GB">Royaume-Uni — GBP</option><option value="EU">Zone euro — EUR</option><option value="OTHER">Autre pays — prix à confirmer</option>
+</select>
+<p class="note">Les prix affichés sont des exemples indicatifs, pas des tarifs de paiement actifs. Les moyens de paiement locaux et internationaux devront être activés auprès d'un prestataire autorisé, après vérification de l'éligibilité du pays du vendeur et des règles de Google Play.</p>
+</section>
+
+<section class="card"><h2>Développer ton activité</h2><ol class="muted" style="line-height:1.8;padding-left:21px">
+<li>Montre des exemples à de petites entreprises.</li><li>Recueille leurs avis et améliore les outils.</li><li>Teste un prix transparent et adapté au marché.</li><li>Active les paiements seulement quand le service Premium fonctionne réellement.</li>
+</ol><p class="note">Cette version est un prototype installable après hébergement sécurisé HTTPS. La création de texte fonctionne localement comme démonstration. Les comptes, la génération par IA en ligne, la sauvegarde cloud et les paiements réels nécessitent un serveur et des intégrations supplémentaires. Aucun revenu n'est garanti. Pour ouvrir un compte marchand ou gérer des paiements, demande l'aide d'un parent ou tuteur si nécessaire.</p></section>
+<div class="foot">MiniStudio Premium • Prototype progressif • Version 0.1</div>
+</main>
+<script>
+let installEvent=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvent=e;document.getElementById('installBtn').style.display='inline-block'});
+document.getElementById('installBtn').addEventListener('click',async()=>{if(!installEvent)return;installEvent.prompt();await installEvent.userChoice;installEvent=null;document.getElementById('installBtn').style.display='none'});
+function makeContent(){
+ const b=document.getElementById('business').value.trim()||'ton activité', f=document.getElementById('format').value, g=document.getElementById('goal').value, s=document.getElementById('style').value;
+ const start=s==='Professionnel'?`Découvrez ${b} : une activité attentive à vos besoins.`:s==='Drôle et original'?`Et si tu découvrais ${b} aujourd'hui ? 😉`:s==='Simple et direct'?`${b} : découvre ce que nous proposons.`:`Salut ! 👋 Aujourd'hui, on te présente ${b} !`;
+ let t=f==='video'?`[PLAN 1 — montrer l'activité]\n${start}\n\n[PLAN 2 — montrer un produit ou service]\n${g}.\n\n[PLAN 3 — invitation]\nÉcris-nous pour en savoir plus !`:f==='whatsapp'?`Bonjour 👋\nNous te présentons ${b}.\nNotre objectif : ${g.toLowerCase()}.\nÉcris-nous pour recevoir les informations.\n[Ajoute ici les prix et détails exacts.]`:f==='caption'?`${start}\n${g}.\nContacte-nous en message privé pour en savoir plus. ✨\n#commerce #découverte`: `${start}\n\n${g}.\n\n✅ Des informations claires\n✅ Un contact simple\n\n📩 Écris-nous pour en savoir plus !\n[Ajoute uniquement des informations vraies.]`;
+ document.getElementById('output').textContent=t;document.getElementById('status').textContent='Exemple créé : relis-le et personnalise les détails avant publication.';
+}
+async function copyContent(){let t=document.getElementById('output').textContent;try{await navigator.clipboard.writeText(t);document.getElementById('status').textContent='Texte copié.'}catch(e){document.getElementById('status').textContent='Sélectionne le texte pour le copier.'}}
+function changeCurrency(){let c=document.getElementById('country').value;let v={BF:'2 000 F CFA',CI:'2 000 F CFA',SN:'2 000 F CFA',GH:'GHS — tarif à définir',NG:'NGN — tarif à définir',US:'USD — tarif à définir',GB:'GBP — tarif à définir',EU:'EUR — tarif à définir',OTHER:'Prix local à définir'};document.getElementById('price').textContent=v[c]}
+if('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
+</script></body></html>

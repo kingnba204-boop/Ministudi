@@ -1,0 +1,17 @@
+MINISTUDIO PREMIUM — PROTOTYPE WEB INSTALLABLE
+
+Contenu :
+- index.html : interface de démonstration
+- manifest.webmanifest : identité de l'application web
+- sw.js : cache hors ligne de l'interface
+- icon.svg : icône
+
+Pour proposer l'installation sur Android :
+1. Héberger tous les fichiers sur un site HTTPS.
+2. Ouvrir l'adresse du site dans Chrome sur Android.
+3. Utiliser le menu Chrome > Installer l'application (ou Ajouter à l'écran d'accueil).
+
+Limites :
+- Ce n'est pas un APK Android natif.
+- Les comptes, serveur IA, sauvegarde cloud et paiements réels ne sont pas implémentés.
+- Ne collectez pas de paiements avant d'avoir intégré et testé un prestataire conforme.

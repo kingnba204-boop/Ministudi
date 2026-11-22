@@ -1,0 +1,9 @@
+{
+  "name": "MiniStudio Premium",
+  "short_name": "MiniStudio",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a1220",
+  "theme_color": "#101827",
+  "description": "Atelier de création de contenus marketing"
+}
